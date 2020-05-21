@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            if(document.MyForm.FirstName.value ==""){
+                alert("Please Enter Your First Name");
+                
+                document.MyForm.FirstName.focus();
+                return false;
+            }
+            if(document.MyForm.LastName.value ==""){
+                alert("Please Enter Your Last Name");
+                
+                document.MyForm.LasttName.focus();
+                return false;
+            }
+            if(document.MyForm.Email.value ==""){
+                alert("Please Enter Your Email Id");
+                document.MyForm.Email.focus();
+                return false;
+            }
+            if(document.MyForm.MobileNo.value =="" || isNaN(document.MyForm.MobileNo.value|| document.MyForm.MobileNo.value.length!=10)){
+                alert("Please Provide Your 10 Digit Mobile Number");
+                document.MyForm.MobileNo.focus();
+                return false;
+            }
+            if(document.MyForm.Country.value ==""){
+                alert("Please Enter Your Country Name");
+                document.MyForm.Country.focus();
+                return false;
+            }
+            if(document.MyForm.State.value ==""){
+                alert("Please Enter Your State Name");
+                document.MyForm.State.focus();
+                return false;
+            }
+            if(document.MyForm.City.value ==""){
+                alert("Please Enter Your City Name");
+                document.MyForm.City.focus();
+                return false;
+            }
+            if(document.MyForm.ZipCode.value =="" || isNaN(document.MyForm.ZipCode.value|| document.MyForm.ZipCode.value.length!=6)){
+                alert("Please Provide Your 6 Digit Zip Code");
+                document.MyForm.ZipCode.focus();
+                return false;
+            }
+            if(document.MyForm.symptoms.value =="-1"){
+                alert("Please Provide Your Symptoms");
+                document.MyForm.Symptoms.focus();
+                return false;
+            }
+            return true;
+        }
+            function myFunction() {
+                  var txt;
+                  var r = confirm("Press ok to submit your application else press cancel!");
+                  if (r == true) {
+                    alert("Thank you for submitting your application. Our staff will be in touch with you within 24 hours");
+                  } else {
+                    alert("You pressed Cancel!");
+                  }
+                  document.getElementById("demo").innerHTML = txt;
+                  return true;
+                }
+        
+        
+    </script>
+</head>
+<body>
+    <center><h1><font color = "red"><u>Preliminary Health Check-up Application Form for COVID19</u></font></h1></center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form name = "MyForm"   onsubmit="return (validate() && myFunction())">
+    <table border="2" align="center">
+        <tr>
+            <td align = "left">First Name</td>
+            <td><input type= "text" name = "FirstName"/>
+        </tr>
+        <tr>
+            <td align = "left">Last Name</td>
+            <td><input type= "text" name = "LastName"/>
+        </tr>
+        <tr>
+            <td align = "left">Email</td>
+            <td><input type= "text" name = "Email"/></td>
+        </tr>
+        <tr>
+            <td align = "left">Mobile No</td>
+            <td><input type= "text" name = "MobileNo"/></td>
+        </tr>
+        <tr>
+            <td align = "left">Country</td>
+            <td><input type= "text" name = "Country"/></td>
+        </tr>
+        <tr>
+            <td align = "left">State</td>
+            <td><input type= "text" name = "State"/></td>
+        </tr>
+        <tr>
+            <td align = "left">City</td>
+            <td><input type= "text" name = "City"/></td>
+        </tr>
+        <tr>
+            <td align = "left">Zip Code</td>
+            <td><input type= "text" name = "ZipCode"/></td>
+        </tr>
+        <tr>
+            <td align = "left">Select your symptoms <br> Choose multiple options by pressing 'Ctrl' key</td>
+            <td>
+                <select name = "symptoms" multiple>
+                    <option value="-1" selected>[Choose your symptoms]</option>
+                    <option value="1">Cough</option>
+                    <option value="2">Difficulty in breathing</option>
+                    <option value="3">Fever</option>
+                    <option value="4">Chills</option>
+                    <option value="5">Muscle pain</option>
+                    <option value="6">Sore throat</option>
+                    <option value="7">Loss of taste or smell</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><p>Click the Button to Submit your Form</p></td>
+         
+                <td>
+
+                <input type="submit" value="submit"/>
+                
+                <p id="demo"></p>
+                
+                
+                </td>
+            
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
