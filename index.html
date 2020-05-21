@@ -8,14 +8,12 @@
         function validate(){
             if(document.MyForm.FirstName.value ==""){
                 alert("Please Enter Your First Name");
-                
                 document.MyForm.FirstName.focus();
                 return false;
             }
             if(document.MyForm.LastName.value ==""){
                 alert("Please Enter Your Last Name");
-                
-                document.MyForm.LasttName.focus();
+                document.MyForm.LastName.focus();
                 return false;
             }
             if(document.MyForm.Email.value ==""){
@@ -50,7 +48,7 @@
             }
             if(document.MyForm.symptoms.value =="-1"){
                 alert("Please Provide Your Symptoms");
-                document.MyForm.Symptoms.focus();
+                document.MyForm.symptoms.focus();
                 return false;
             }
             return true;
